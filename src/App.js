@@ -14,9 +14,10 @@ function App() {
   const [reservationName, setreservationName] = useState('')
 
   const dispatch = useDispatch()
-  
+
   const handleAddReservation = () => {
     dispatch(addReservation(reservationName))
+    setreservationName('')
   }
 
   return (

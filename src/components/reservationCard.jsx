@@ -1,9 +1,10 @@
 import { useDispatch } from "react-redux";
 
 
-const dispatch = useDispatch
-
 const ReservationCard = ({ name }) => {
+
+  const dispatch = useDispatch()
+  
   return (
     <div className="reservation-card-container">{ name }</div>
   )
