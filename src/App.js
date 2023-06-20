@@ -13,7 +13,7 @@ function App() {
   )
 
   const customers = useSelector(
-    (state) => state.customer.value
+    (state) => state.customers.value
   )
 
   const [reservationName, setreservationName] = useState('')
@@ -44,7 +44,7 @@ function App() {
         </div>
         <div className="customer-food-container">
           {customers.map( (customer, id) => {
-            return <CustomerCard key={id} />
+            return <CustomerCard key={id} id={customer.id} name={customer.name} food={customer.food}/>
           })}
         </div>
       </div>
