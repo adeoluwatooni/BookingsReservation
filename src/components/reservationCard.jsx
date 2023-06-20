@@ -1,12 +1,19 @@
 import { useDispatch } from "react-redux";
+import { removeReservation } from "../features/reservationSlice";
+import { addCustomer } from "../features/customerSlice";
 
 
-const ReservationCard = ({ name }) => {
+const ReservationCard = ({ name, id }) => {
 
   const dispatch = useDispatch()
-  
+
   return (
-    <div className="reservation-card-container">{ name }</div>
+    <div
+      onClick={() => {
+        dispatch(removeReservation(id))
+        dispatch(addCustomer())
+      }}
+      className="reservation-card-container">{name}</div>
   )
 }
 
