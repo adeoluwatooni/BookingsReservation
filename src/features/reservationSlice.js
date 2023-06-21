@@ -10,6 +10,7 @@ export const reservationSlice = createSlice({
   reducers: {
     addReservation: (state, action) => {
       state.value = [...state.value, action.payload]
+      // console.log(action.payload.id)
     },
     removeReservation: (state, action) => {
       state.value.splice(action.payload, 1)
