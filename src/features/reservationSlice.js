@@ -9,8 +9,9 @@ export const reservationSlice = createSlice({
   initialState,
   reducers: {
     addReservation: (state, action) => {
-      state.value = [...state.value, action.payload]
+      //state.value = [...state.value, action.payload]
       // console.log(action.payload.id)
+      state.value.push(action.payload)
     },
     removeReservation: (state, action) => {
       state.value.splice(action.payload, 1)
